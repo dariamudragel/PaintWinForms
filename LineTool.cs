@@ -23,7 +23,6 @@ namespace WinFormsGratedLabPart
             if (e.Button == MouseButtons.Left)
             {
                 isDrawing = true;
-                //startPoint = ScalePoint(e.Location);
                 startPoint = e.Location;
                 endPoint = e.Location;
             }
@@ -34,7 +33,6 @@ namespace WinFormsGratedLabPart
             if (isDrawing)
             {
                 endPoint = e.Location;
-               // endPoint = ScalePoint(e.Location);
                 pictureBox1.Invalidate();
             }
         }
@@ -83,20 +81,6 @@ namespace WinFormsGratedLabPart
         {
             zoomFactor = factor;
         }
-        //public void SetZoom(float zoomFactor)
-        //{
-        //    if (zoomFactor <= 0) throw new ArgumentException("Zoom must be positive");
-        //    float oldZoom = this.zoomFactor;
-        //    this.zoomFactor = zoomFactor / 100f;
-        //}
-
-        //public PointF ScalePoint(PointF point)
-        //{
-        //    zoomFactor = 0.9f;
-        //    return new PointF((int)(point.X / zoomFactor), (int)(point.Y / zoomFactor));
-        //}
-
-
 
         public override void SelectAll(PictureBox pictureBox1)
         {
